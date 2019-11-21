@@ -1,5 +1,16 @@
 ## robot cleaner
 
+this is a project in typescript to describe a software prototype robot cleaner that moves around a space cleaning
+
+### setup
+
+`npm i` will install the required packages
+
+`npm start` will start the app
+
+`npm test` will run tests (jest)
+
+
 ### input 
 
  - enter in command line (stdin)

@@ -2,8 +2,9 @@
   "name": "robot-cleaner",
   "version": "1.0.0",
   "description": "test for cint",
-  "main": "index.ts",
+  "main": "dist/app.js",
   "scripts": {
+    "start": "tsc && node dist/index.js",
     "test": "jest"
   },
   "author": "Ryan Anglem",
@@ -12,6 +13,12 @@
     "readline": "^1.3.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
+    "@babel/preset-typescript": "^7.7.2",
+    "@types/jest": "^24.0.23",
+    "@types/node": "^12.12.11",
+    "babel-jest": "^24.9.0",
     "jest": "^24.9.0"
   }
 }
