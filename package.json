@@ -4,7 +4,7 @@
   "description": "test for cint",
   "main": "index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "author": "Ryan Anglem",
   "license": "ISC",
