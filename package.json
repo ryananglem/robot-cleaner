@@ -2,7 +2,7 @@
   "name": "robot-cleaner",
   "version": "1.0.0",
   "description": "test for cint",
-  "main": "dist/app.js",
+  "main": "dist/index.js",
   "scripts": {
     "start": "tsc && node dist/index.js",
     "test": "jest"
