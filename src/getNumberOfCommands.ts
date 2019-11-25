@@ -1,4 +1,4 @@
-export const getNumberOfCommands = () => {
+export const getNumberOfCommands = (): Promise<number> => {
 
     return new Promise((resolve) => {
       process.stdin.once('data', (data) => {

@@ -3,7 +3,7 @@ import { getStartingCoordinates } from './getStartingCoordinates'
 
 describe('get starting coordinates', () => {
 
-    let stdin
+    let stdin: any
     beforeEach((done) => {
       done()
         stdin = require('mock-stdin').stdin()

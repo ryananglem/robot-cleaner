@@ -1,6 +1,6 @@
 
-export const getStartingCoordinates = () => {
-
+export const getStartingCoordinates = (): Array<number> => {
+  // @ts-ignore
   return new Promise((resolve) => {
     process.stdin.once('data', (data) => {
       const coords = data.toString().trim().split(' ')

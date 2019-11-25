@@ -1,10 +1,21 @@
 import { getNumberOfCommands} from './getNumberOfCommands'
+import { getStartingCoordinates} from './getStartingCoordinates'
+import { getListOfCommands} from './getInstructions'
+import { processCommands} from './calculateArea'
 
 export const main = async () => {
 
-    const commandsToExecute = await getNumberOfCommands()
+    const commandsToExecute: number = await getNumberOfCommands()
 
-    return commandsToExecute
+    const startingCoordinates: Array<number> = await getStartingCoordinates()
+
+    const listOfCommands = await getListOfCommands(commandsToExecute)
+
+    const totalArea = processCommands(listOfCommands, startingCoordinates)
+
+    console.log(' => Cleaned: ', totalArea)
+
+    process.exit()
 }
 
 

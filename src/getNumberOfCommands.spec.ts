@@ -3,7 +3,7 @@ import { getNumberOfCommands } from './getNumberOfCommands'
 
 describe('get number of commands', () => {
 
-    let stdin
+    let stdin: any
     beforeEach((done) => {
         done()
         stdin = require('mock-stdin').stdin();
