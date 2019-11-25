@@ -7,9 +7,6 @@ describe('app', () => {
         stdin = require('mock-stdin').stdin();
       });
 
-    afterAll(done => {
-        done()
-    })
     it('should get number of commands to use', async () => {
 
         const enteredValue = '4';
