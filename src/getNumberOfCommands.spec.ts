@@ -1,10 +1,11 @@
 import 'babel-polyfill'
-import { main } from './index'
+import { getNumberOfCommands } from './getNumberOfCommands'
 
 describe('get number of commands', () => {
 
     let stdin
-    beforeEach(() => {
+    beforeEach((done) => {
+        done()
         stdin = require('mock-stdin').stdin();
       });
 
@@ -16,7 +17,7 @@ describe('get number of commands', () => {
           stdin.send(`${enteredValue}\r`);
         });
 
-        const result = await main()
+        const result = await getNumberOfCommands()
         expect(result).toEqual(4)
     })
 })
