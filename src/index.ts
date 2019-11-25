@@ -1,8 +1,11 @@
+import { getNumberOfCommands} from './getNumberOfCommands'
 
-export const main = () => {
-    const started = true
-    console.log('started')
-    return started
+export const main = async () => {
+
+    const commandsToExecute = await getNumberOfCommands()
+
+    return commandsToExecute
 }
+
 
 main()
