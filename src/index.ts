@@ -13,7 +13,7 @@ export const main = async () => {
 
     const totalArea = processCommands(listOfCommands, startingCoordinates)
 
-    console.log(' => Cleaned: ', totalArea)
+    console.log(` => Cleaned: ${totalArea.toString().trim()}`)
 
     process.exit()
 }
