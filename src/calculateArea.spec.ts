@@ -1,5 +1,5 @@
 import { processCommand, processCommands} from './calculateArea'
-import { Command, Direction } from './types'
+import { Command } from './types'
 
 describe('calculate area', () => {
 
