@@ -1,15 +1,8 @@
+import { Command, Direction } from './types'
 
+export const getListOfCommands = async (numberOfCommands: number): Promise<Command[]> => {
 
-type Direction =  'N' | 'S' | 'E' | 'W'
-
-export interface Command { 
-    direction: Direction
-    distance: number
-}
-
-export const getListOfCommands = async (numberOfCommands: number) => {
-
-    let commandsList = []
+    let commandsList: Command[] = []
     let i = 0 
     while (i < numberOfCommands) {
         const command = new Promise(resolve => {
@@ -18,13 +11,18 @@ export const getListOfCommands = async (numberOfCommands: number) => {
                 }) 
             })
         const cleanData = await command
-        const instructionArray = cleanData.toString().split(' ')
-        const instruction: Command = {
-            direction: instructionArray[0] as Direction,
-            distance: Number(instructionArray[1])
-        }
+        const instruction = parseCommand(cleanData.toString())
         commandsList.push(instruction)
         i ++
     }
     return commandsList
 }
+
+const parseCommand = (command: string): Command => {
+    const instructionArray = command.split(' ')
+    const instruction: Command = {
+            direction: instructionArray[0] as Direction,
+            distance: Number(instructionArray[1])
+        }
+    return instruction
+} 
